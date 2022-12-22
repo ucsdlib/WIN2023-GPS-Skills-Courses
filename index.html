@@ -1,0 +1,433 @@
+---
+layout: workshop
+root: .
+venue: "Intro to Data Management - School of Global Policy and Strategy"      # brief name of host site without address (e.g., "Euphoric State University")
+address: "RM3203 GPS, 9500 Gilman Drive, #0519, La Jolla, CA"    # street address of workshop (e.g., "123 Forth Street, Blimingen, Euphoria")
+country: "us"    # country (lowercase two-letter ISO code such as "fr" - see https://en.wikipedia.org/wiki/ISO_3166-1)
+language: "en"   # language (lowercase two-letter ISO code such as "fr" - see https://en.wikipedia.org/wiki/ISO_639-1)
+latlng: "32.88402, -117.24111"     # fractional latitude and longitude (e.g., "41.7901128,-87.6007318"; you can use http://www.latlong.net/)
+humandate: "Feb 15 - Mar 3, 2020"  # human-readable date (e.g., "Feb 17-18, 2020")
+humantime: "2:00 pm - 3:20 pm"  # human-readable time (e.g., "9:00 am - 4:30 pm")
+startdate: "2022-02-15"  # use YYYY-MM-DD format like "2015-01-01"
+enddate: "2022-03-03"  # use YYYY-MM-DD format like" 2015-01-02"
+days: "Tuesday, Thursday"
+instructor: ["Reid Otsuji (Library)", "Stephanie Labou (Library)", "Cherie Thompson (Library)", "Slade Mahoney(GPS)" ] # list of names like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
+helper: ["Kimberly Thomas (Research ITS)", "Rick Mccosh (OBGYN/Reprod.Sci)", "Stephanie Labou (Library)", "TA: Slade Mahoney (GPS)"]     # list of names like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+contact: "rotsuji@ucsd.edu, kkt008@ucds.edu"    # contact email address for workshop organizer, such as "grace@hopper.org"
+etherpad: "https://hackmd.io/@U2NG/Bko70DAKY" # optional (insert the URL for your Etherpad if you're using one)
+eventbrite:       # optional (insert the alphanumeric key for Eventbrite registration, e.g., "1234567890AB")
+---
+<!--
+  HEADER
+
+  Edit the values in the block above to be appropriate for your workshop.
+  If the value is not 'true', 'false', 'null', or a number, please use
+  double quotation marks around the value, unless specified otherwise.
+  And run 'tools/check' *before* committing to make sure that changes are good.
+-->
+
+<!--
+  EVENTBRITE
+
+  This block includes the Eventbrite registration widget if
+  'eventbrite' has been set in the header.  You can delete it if you
+  are not using Eventbrite, or leave it in, since it will not be
+  displayed if the 'eventbrite' field in the header is not set.
+-->
+{% if page.eventbrite %}
+<iframe
+src="https://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
+frameborder="0"
+width="100%"
+height="248px"
+scrolling="auto">
+</iframe>
+{% endif %}
+
+<h2 id="general">General Information</h2>
+
+<!--
+  INTRODUCTION
+
+  Edit the general explanatory paragraph below if you want to change
+  the pitch.
+-->
+<p>
+  This is the website for the School of Global Policy and Strategy short course in data management.  This course will introduce you best practices in data management, preparation and representation, including the basics of data in spreadsheets, SQL and using the Unix Shell.  In order to earn a certificate of proficiency, you must attend all of the class meetings for the course, do the short assignments, and pass the quizzes.
+</p>
+
+
+<!--
+  AUDIENCE
+
+  Explain who your audience is.  (In particular, tell readers if the
+  workshop is only open to people from a particular institution.
+-->
+<p id="who">
+  <strong>Who:</strong>
+  The course is aimed at GPS graduate students.
+  <strong>You don't need to have any previous knowledge of the tools that will
+    be presented at the workshop.</strong>
+  </p>
+
+<!--
+  LOCATION
+
+  This block displays the address and links to maps showing directions
+  if the latitude and longitude of the workshop have been set.  You
+  can use http://itouchmap.com/latlong.html to find the lat/long of an
+  address.
+-->
+{% if page.latlng %}
+<p id="where">
+  <strong>Where:</strong>
+  {{page.address}}.
+</p>
+{% endif %}
+
+<!--
+  SPECIAL REQUIREMENTS
+
+  Modify the block below if there are any special requirements.
+-->
+<p id="requirements">
+  <strong>Requirements:</strong> Participants must bring a laptop with
+  a few specific software packages installed (listed
+  <a href="#setup">below</a>).
+</p>
+
+<!--
+  CONTACT EMAIL ADDRESS
+
+  Display the contact email address set in the header.  If an address
+  isn't set in the header, the Software Carpentry admin address is
+  used.
+-->
+<p id="contact">
+  <strong>Contact</strong>:
+  Please mail
+  {% if page.contact %}
+  <a href='mailto:{{page.contact}}'>{{page.contact}}</a>
+  {% else %}
+  <a href='mailto:{{site.contact}}'>{{site.contact}}</a>
+  {% endif %}
+  for more information.
+</p>
+
+<p id="certificate">
+  <strong>Assessment</strong>:
+  A certificate of proficiency will be given to students who:
+</p>
+
+<ul>
+  <li>Attend/view all classes</li>
+  <li>Passes quizzes</li>
+  <li>Satisfactorily completes the weekly assignments</li>
+</ul>
+
+
+<p id = "data">
+  <strong>Data:</strong>
+  <ul>
+    <!--
+    <li>Download the <a href="http://swcarpentry.github.io/shell-novice/shell-novice-data.zip">shell-novice-files.zip </a> and move the file to your <strong>Desktop</strong>.</li>
+    <li>Double-click on the zip file to unzip it. You should end up with a new folder called <strong>data-shell</strong>.</li>
+  -->
+    <li>Download the <a href="http://swcarpentry.github.io/sql-novice-survey/files/survey.db">survey.db</a> and put it on your desktop inside a folder labeled "sql" .</li>
+  </ul>
+
+</p>
+
+
+<p id="help">
+{% if site.lib_appt %}
+  <strong>Need help?</strong>:
+  <ul>
+    <li> Reid Otsuji: Email <a href='mailto:{{page.contact}}'>{{page.contact}}</a></li>
+{% endif %}
+  <li>TA Slade Mahoney<a href='mailto:pmahomey@ucsd.edu'>pmahomey@ucsd.edu</a>, Office Hours: TBD<!-- <a href="{{site.lib_data_lab}}">Library Data/GIS Lab</a> --> </li>
+  <li><a href="{{site.lib_data_lab}}">Library Data/GIS Lab</a> has R specialists</li>
+</ul>
+</p>
+<hr/>
+
+<p>
+<strong>Credits:</strong>  The course materials are adpated from the Software Carpentry <a href="http://software-carpentry.org/lessons/">lessons</a>. Many thanks to the authors of those lessons.
+</p>
+
+<!--
+  SCHEDULE
+
+  Show the workshop's schedule.  Edit the items and times in the table
+  to match your plans.  You may also want to change 'Day 1' and 'Day
+  2' to be actual dates or days of the week.
+-->
+<h2 id="schedule">Schedule</h2>
+
+{% include schedule.html %}
+
+
+<!--
+  ETHERPAD
+
+  At `_misc/etherpad.txt` you will find a template for the etherpad.
+
+  Display the Etherpad for the workshop.  You can set this up in
+  advance or on the first day; either way, make sure you push changes
+  to GitHub after you have its URL.  To create an Etherpad, go to
+
+      http://pad.software-carpentry.org/YYYY-MM-DD-site
+
+  where 'YYYY-MM-DD-site' is the identifier for your workshop,
+  e.g., '2015-06-10-esu'.
+-->
+{% if page.etherpad %}
+<p id="etherpad">
+  <strong>HackMD:</strong> <a href="{{page.etherpad}}">{{page.etherpad}}</a>.
+  <br/>
+  We will use this HackMD for collaborative notes, sharing URLs and bits of code.
+</p>
+{% endif %}
+
+<hr/>
+
+<!--
+  SYLLABUS
+
+  Show what topics will be covered.
+
+  1. If your workshop is R rather than Python, remove the comment
+     around that section and put a comment around the Python section.
+  2. Some workshops will delete SQL.
+  3. Please make sure the list of topics is synchronized with what you
+     intend to teach.
+  4. You may need to move the div's with class="col-md-6" around inside
+     the div's with class="row" to balance the multi-column layout.
+
+  This is one of the places where people frequently make mistakes, so
+  please preview your site before committing, and make sure to run
+  'tools/check' as well.
+-->
+<h2 id="syllabus">Syllabus</h2>
+
+<div class="row">
+
+  <div class="col-md-6">
+<!--
+    <h3 id="syllabus-shell">The Unix Shell</h3>
+    <ul>
+      <li>Files and directories</li>
+      <li>History and tab completion</li>
+      <li>Pipes and redirection</li>
+      <li>Looping over files</li>
+      <li>Creating and running shell scripts</li>
+      <li>Finding things</li>
+      <li><a href="{{site.swc_githubio}}/shell-novice/reference.html">Reference...</a></li>
+    </ul>
+  </div>
+  <!--
+  <div class='row'>
+  <div class="col-md-6">
+    <h3 id="syllabus-of">Data Organization in Open Refine</h3>
+    <ul>
+      <li>Cleaning, organizing and enhancing data in OpenRefine</li>
+      <li>Faceting, splitting and clustering</li>
+      <li>Saving and Exporting</li>
+      <li><a href="http://www.datacarpentry.org/OpenRefine-ecology/">Reference...</a></li>
+    </ul>
+
+  </div>
+
+</div>
+-->
+  <div class="col-md-6">
+    <h3 id="syllabus-sql">Managing Data with SQL</h3>
+    <ul>
+      <li>Reading and sorting data</li>
+      <li>Filtering with <code>where</code></li>
+      <li>Calculating new values on the fly</li>
+      <li>Handling missing values</li>
+      <li>Combining values using aggregation</li>
+      <li>Combining information from multiple tables using <code>join</code></li>
+      <li>Creating, modifying, and deleting data</li>
+      <li>Programming with databases</li>
+      <li><a href="{{site.swc_githubio}}/sql-novice-survey/reference.html">Reference...</a></li>
+    </ul>
+  </div>
+
+
+</div>
+<hr/>
+
+<h2 id="resources">Resources</h3>
+
+{% include resources.html %}
+
+<!--
+  SETUP
+
+  Delete irrelevant sections from the setup instructions.  Each
+  section is inside a 'div' without any classes to make the beginning
+  and end easier to find.
+
+  This is the other place where people frequently make mistakes, so
+  please preview your site before committing, and make sure to run
+  'tools/check' as well.
+-->
+
+<h2 id="setup">Setup</h2>
+
+<p>
+  To participate in this course, you will need
+  access to the software described below. In addition, you will
+  need an up-to-date web browser.
+</p>
+
+<!-- Start of 'shell' section.-->
+<div id="shell">
+
+  <h3>The Bash Shell</h3>
+
+  <p>
+    Bash is a commonly-used shell that gives you the power to do simple
+    tasks more quickly.
+  </p>
+  <div class="row">
+    <div class="col-md-4">
+      <h4 id="shell-windows">Windows</h4>
+      <ol>
+        <li>Download the Git for Windows <a href="https://git-for-windows.github.io/">installer</a>.</li>
+        <li>Run the installer and follow the steps bellow:
+          <ol>
+            <!-- Git 2.6.1 Setup -->
+            <!-- Welcome to the Git Setup Wizard -->
+            <li>Click on "Next".</li>
+            <!-- Information -->
+            <li>Click on "Next".</li>
+            <!-- Select Destination Location -->
+            <li>Click on "Next".</li>
+            <!-- Select Components -->
+            <li>Click on "Next".</li>
+            <!-- Select Start Menu Folder -->
+            <li>Click on "Next".</li>
+            <!-- Adjusting your PATH environment -->
+            <li>
+              <strong>
+                Select "Use Git from the Windows Command Prompt" and click on "Next".
+              </strong>
+              If you forgot to do this programs that you need for the workshop will not work properly.
+              If this happens rerun the installer and select the appropriate option.
+            </li>
+            <!-- Configuring the line ending conversions -->
+            <li>
+              Click on "Next".
+              <strong>
+                Keep "Checkout Windows-style, commit Unix-style line endings" selected.
+              </strong>
+            </li>
+            <!-- Configuring the terminal emulator to use with Git Bash -->
+            <li>
+              <strong>
+                Select "Use Windows' default console window" and click on "Next".
+              </strong>
+            </li>
+            <!-- Configuring experimental performance tweaks -->
+            <li>Click on "Next".</li>
+            <!-- Installing -->
+            <!-- Completing the Git Setup Wizard -->
+            <li>Click on "Finish".</li>
+          </ol>
+        </li>
+      </ol>
+      <p>This will provide you with both Git and Bash in the Git Bash program.</p>
+    </div>
+    <div class="col-md-4">
+      <h4 id="shell-macosx">Mac OS X</h4>
+      <p>
+        The default shell in all versions of Mac OS X is Bash, so no
+        need to install anything.  You access Bash from the Terminal
+        (found in
+        <code>/Applications/Utilities</code>). You may want to keep
+        Terminal in your dock for this workshop.
+      </p>
+    </div>
+    <div class="col-md-4">
+      <h4 id="shell-linux">Linux</h4>
+      <p>
+        The default shell is usually Bash, but if your
+        machine is set up differently you can run it by opening a
+        terminal and typing <code>bash</code>.  There is no need to
+        install anything.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<!-- End of 'shell' section. -->
+
+
+<!-- start of sql lite section -->
+<div id="sql">
+  <h3>SQLite</h3>
+
+  <p>
+    SQL is a specialized programming language used with databases.  We
+    use a simple database manager called
+    <a href="http://www.sqlite.org/">SQLite</a> in our lessons.
+    We will use <a href="https://addons.mozilla.org/en-us/firefox/addon/sqlite-manager/">SQLite Manager</a>
+    plugin for <a href="">Firefox</a>. If you don't have Firefox installed, you need to instal it first and
+    then you will be able to add the plugin.
+  </p>
+  <p>
+  </p>
+
+  <div class="row">
+    <div class="col-md-4">
+      <h4 id="sql-windows">Windows</h4>
+      <p>
+        Pre-compiled SQLite Binaries for Windows. <a href="https://www.sqlite.org/download.html">Download</a>
+        Install sqlite-dll-win64-x64-3310100.zip
+      </p>
+    </div>
+    <div class="col-md-4">
+      <h4 id="sql-macosx">Mac OS X</h4>
+      <p>
+        SQLite comes pre-installed on Mac OS X.
+      </p>
+    </div>
+    <div class="col-md-4">
+      <h4 id="sql-linux">Linux</h4>
+      <p>
+        SQLite comes pre-installed on Linux.
+      </p>
+    </div>
+  </div>
+
+<!--
+  Uncomment this section if you are using our virtual machine.
+
+<div id="vm">
+  <h3>Virtual Machine</h3>
+
+  <p>
+    Some instructors prefer to have learners use a virtual machine (VM)
+    rather than install software on their own computers.  If your
+    instructors have chosen to do this, please:
+  </p>
+  <ol>
+    <li>
+      Install <a href="https://www.virtualbox.org/">VirtualBox</a>.
+    </li>
+    <li>
+      Download our <a href="{{site.swc_vm}}">VM image</a>.
+      <strong>Warning:</strong> this file is 1.7 GByte, so please
+      download it <em>before</em> coming to your workshop.
+    </li>
+    <li>
+      Load the VM into VirtualBox by selecting "Import Appliance" and
+      loading the <code>.ova</code> file.
+    </li>
+  </ol>
+</div>
+-->
