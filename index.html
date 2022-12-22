@@ -400,88 +400,90 @@ For this workshop we will be referencing the <a href="https://swcarpentry.github
 
 <!-- End of Git section. -->
 
-<!-- Start of 'shell' section.-->
+<!-- Start of Unix Shell section. -->
+
 <div id="shell">
-
   <h3>The Bash Shell</h3>
-
   <p>
-    Bash is a commonly-used shell that gives you the power to do simple
+    Bash is a commonly-used shell that gives you the power to do
     tasks more quickly.
   </p>
-  <div class="row">
-    <div class="col-md-4">
-      <h4 id="shell-windows">Windows</h4>
-      <ol>
-        <li>Download the Git for Windows <a href="https://git-for-windows.github.io/">installer</a>.</li>
-        <li>Run the installer and follow the steps bellow:
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event,'ShellWindows')">Windows</button>
+    <button class="tablinks" onclick="openTab(event,'ShellMacOS')">MacOS</button>
+    <button class="tablinks" onclick="openTab(event,'ShellLinux')">Linux</button>
+  </div>
+  <div id="ShellWindows" class="tabcontent">
+    <ol>
+       <li>Download the Git for Windows <a href="https://gitforwindows.org/">installer</a>.</li>
+       <li>Run the installer and follow the steps below:
           <ol>
-            <!-- Git 2.6.1 Setup -->
-            <!-- Welcome to the Git Setup Wizard -->
-            <li>Click on "Next".</li>
-            <!-- Information -->
-            <li>Click on "Next".</li>
-            <!-- Select Destination Location -->
-            <li>Click on "Next".</li>
-            <!-- Select Components -->
-            <li>Click on "Next".</li>
-            <!-- Select Start Menu Folder -->
-            <li>Click on "Next".</li>
-            <!-- Adjusting your PATH environment -->
-            <li>
-              <strong>
-                Select "Use Git from the Windows Command Prompt" and click on "Next".
-              </strong>
-              If you forgot to do this programs that you need for the workshop will not work properly.
-              If this happens rerun the installer and select the appropriate option.
-            </li>
-            <!-- Configuring the line ending conversions -->
-            <li>
-              Click on "Next".
-              <strong>
-                Keep "Checkout Windows-style, commit Unix-style line endings" selected.
-              </strong>
-            </li>
-            <!-- Configuring the terminal emulator to use with Git Bash -->
-            <li>
-              <strong>
-                Select "Use Windows' default console window" and click on "Next".
-              </strong>
-            </li>
-            <!-- Configuring experimental performance tweaks -->
-            <li>Click on "Next".</li>
-            <!-- Installing -->
-            <!-- Completing the Git Setup Wizard -->
-            <li>Click on "Finish".</li>
+            <p>Git 2.27.0 Setup<p/>
+            <li>Click on "Next" four times (two times if you've previously installed Git).  You don't need to change anything in the Information, location, components, and start menu screens.</li>
+            <li><strong>From the dropdown menu select "Use the nano editor by default" and click on "Next".</strong></li>
+              <p>Adjusting your PATH environment</p>
+            <li>Ensure that "Git from the command line and also from 3rd-party software" is selected and click on "Next". (If you don't do this Git Bash will not work properly, requiring you to remove the Git Bash installation, re-run the installer and to select the "Git from the command line and also from 3rd-party software" option.)</li>
+              <p>Choosing the SSH executable</p>
+              <p>Choosing HTTPS transport backend</p>
+            <li>Ensure that "Use the native Windows Secure Channel library" is selected and click on "Next".</li>
+              <p>This should mean that people stuck behind corporate firewalls that do MITM attacks with their own root CA are still able to access remote git repos.</p>
+              <p>Configuring the line ending conversions</p>
+            <li>Ensure that "Checkout Windows-style, commit Unix-style line endings" is selected and click on "Next".</li>
+              <p>Configuring the terminal emulator to use with Git Bash</p>
+            <li><strong>Ensure that "Use Windows' default console window" is selected and click on "Next".</strong></li>
+              <p>Configuring extra options</p>
+            <li>Ensure that "Default (fast-forward or merge) is selected and click "Next"</li>
+            <li>Ensure that "Enable file system caching" and "Enable Git Credential Manager" are selected and click on "Next".</li>
+              <p>Configuring experimental options</p>
+            <li>Click on "Install".</li>
+              <p>Installing</p>
+              <p>Completing the Git Setup Wizard</p>
+              <p>as of 2020-06-02, the Window will say "click Finish", but the button is labelled as "Next"</p>
+            <li>Click on "Finish" or "Next".</li>
           </ol>
-        </li>
-      </ol>
-      <p>This will provide you with both Git and Bash in the Git Bash program.</p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="shell-macosx">Mac OS X</h4>
+      </li>
+          <li>If your "HOME" environment variable is not set (or you don't know what this is):
+            <ol>
+              <li>Open command prompt (Open Start Menu then type <code>cmd</code> and press <kbd>Enter</kbd>)</li>
+              <li>Type the following line into the command prompt window exactly as shown:
+                <p><code>setx HOME "%USERPROFILE%"</code></p>
+              </li>
+              <li>Press <kbd>Enter</kbd>, you should see <code>SUCCESS: Specified value was saved.</code></li>
+              <li>Quit command prompt by typing <code>exit</code> then pressing <kbd>Enter</kbd></li>
+            </ol>
+	  </li>
+        </ol>
+        <p>This will provide you with both Git and Bash in the Git Bash program.</p>
+        <p><strong>Video Tutorial:</strong> <a href="https://www.youtube-nocookie.com/embed/339AEqk9c-8?modestbranding=1&playsinline=1&iv_load_policy=3&rel=0">Windows Installation</a></p>     
+  </div>
+  <div id="ShellMacOS" class="tabcontent">
+    <p>The default shell in some versions of macOS is Bash, and Bash is available in all versions, so no need to install anything. You access Bash from the Terminal (found in <code>/Applications/Utilities</code>). See the Git installation <a href="#shell-macos-video-tutorial">video tutorial</a> for an example on how to open the Terminal. You may want to keep Terminal in your dock for this workshop.</p>
+        <p>
+            To see if your default shell is Bash type <code>echo $SHELL</code>
+            in Terminal and press the <kbd>Return</kbd> key. If the message
+            printed does not end with '/bash' then your default is something
+            else and you can run Bash by typing <code>bash</code>
+        </p>
+        <p>
+          If you want to change your default shell, see <a href="https://support.apple.com/en-au/HT208050" rel="noopener">
+          this Apple Support article</a> and follow the instructions on "How to change your default shell".
+        </p><strong>Video Tutorial</strong>
+        <a href="https://www.youtube-nocookie.com/embed/9LQhwETCdwY?modestbranding=1&playsinline=1&iv_load_policy=3&rel=0">MacOS Installation</a>
+   </div>
+   <div id="ShellLinux" class="tabcontent">
       <p>
-        The default shell in all versions of Mac OS X is Bash, so no
-        need to install anything.  You access Bash from the Terminal
-        (found in
-        <code>/Applications/Utilities</code>). You may want to keep
-        Terminal in your dock for this workshop.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="shell-linux">Linux</h4>
-      <p>
-        The default shell is usually Bash, but if your
-        machine is set up differently you can run it by opening a
-        terminal and typing <code>bash</code>.  There is no need to
+        The default shell is usually Bash and there is usually no need to
         install anything.
       </p>
-    </div>
-  </div>
+      <p>
+        To see if your default shell is Bash type <code>echo $SHELL</code> in
+        a terminal and press the <kbd>Enter</kbd> key. If the message printed
+        does not end with '/bash' then your default is something else and you
+        can run Bash by typing <code>bash</code>.
+      </p>
+   </div>
 </div>
-
-
-<!-- End of 'shell' section. -->
+<!-- End of Unix Shell section. -->
 
 
 <!-- start of sql lite section -->
