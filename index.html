@@ -1,21 +1,22 @@
 ---
 layout: workshop
 root: .
-venue: "Intro to Data Management - School of Global Policy and Strategy"      # brief name of host site without address (e.g., "Euphoric State University")
-address: "RM3203 GPS, 9500 Gilman Drive, #0519, La Jolla, CA"    # street address of workshop (e.g., "123 Forth Street, Blimingen, Euphoria")
+venue: "School of Global Policy and Strategy (GPS) - Skills Courses"      # brief name of host site without address (e.g., "Euphoric State University")
+address: "Virtual"    # street address of workshop (e.g., "123 Forth Street, Blimingen, Euphoria")
 country: "us"    # country (lowercase two-letter ISO code such as "fr" - see https://en.wikipedia.org/wiki/ISO_3166-1)
 language: "en"   # language (lowercase two-letter ISO code such as "fr" - see https://en.wikipedia.org/wiki/ISO_639-1)
-latlng: "32.88402, -117.24111"     # fractional latitude and longitude (e.g., "41.7901128,-87.6007318"; you can use http://www.latlong.net/)
-humandate: "Feb 15 - Mar 3, 2020"  # human-readable date (e.g., "Feb 17-18, 2020")
+<!--latlng: "32.88402, -117.24111"     # fractional latitude and longitude (e.g., "41.7901128,-87.6007318"; you can use http://www.latlong.net/)-->
+humandate: "Jan 10 - Mar 9, 2023"  # human-readable date (e.g., "Feb 17-18, 2020")
 humantime: "2:00 pm - 3:20 pm"  # human-readable time (e.g., "9:00 am - 4:30 pm")
-startdate: "2022-02-15"  # use YYYY-MM-DD format like "2015-01-01"
-enddate: "2022-03-03"  # use YYYY-MM-DD format like" 2015-01-02"
+startdate: "2023-01-10"  # use YYYY-MM-DD format like "2015-01-01"
+enddate: "2023-03-09"  # use YYYY-MM-DD format like" 2015-01-02"
 days: "Tuesday, Thursday"
-instructor: ["Reid Otsuji (Library)", "Stephanie Labou (Library)", "Cherie Thompson (Library)", "Slade Mahoney(GPS)" ] # list of names like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["Kimberly Thomas (Research ITS)", "Rick Mccosh (OBGYN/Reprod.Sci)", "Stephanie Labou (Library)", "TA: Slade Mahoney (GPS)"]     # list of names like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
-contact: "rotsuji@ucsd.edu, kkt008@ucds.edu"    # contact email address for workshop organizer, such as "grace@hopper.org"
-etherpad: "https://hackmd.io/@U2NG/Bko70DAKY" # optional (insert the URL for your Etherpad if you're using one)
+instructor: ["Reid Otsuji (Library)", "Stephanie Labou (Library)", "Kimberly Thomas (Research ITS)", "Eastern Kang (Pediatrics)", "Carolina Dantas (Medicine)", "Rukmini Ravi (SDSC)" ] # list of names like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
+helper: ["Kimberly Thomas (Research ITS)", "Celeste Allaband (Pediatrics)", "Reid Otsuji (Library)", "TA: Pending (GPS)"]     # list of names like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+contact: "kkt008@ucds.edu, spsardesai@ucsd.edu, rotsuji@ucsd.edu"    # contact email address for workshop organizer, such as "grace@hopper.org"
+<!-- etherpad:  # optional (insert the URL for your Etherpad if you're using one)
 eventbrite:       # optional (insert the alphanumeric key for Eventbrite registration, e.g., "1234567890AB")
+-->
 ---
 <!--
   HEADER
@@ -145,7 +146,7 @@ scrolling="auto">
   <ul>
     <li> Reid Otsuji: Email <a href='mailto:{{page.contact}}'>{{page.contact}}</a></li>
 {% endif %}
-  <li>TA Slade Mahoney<a href='mailto:pmahomey@ucsd.edu'>pmahomey@ucsd.edu</a>, Office Hours: TBD<!-- <a href="{{site.lib_data_lab}}">Library Data/GIS Lab</a> --> </li>
+  <li>TA Pending: Email pending, Office Hours: TBD<!-- <a href="{{site.lib_data_lab}}">Library Data/GIS Lab</a> --> </li>
   <li><a href="{{site.lib_data_lab}}">Library Data/GIS Lab</a> has R specialists</li>
 </ul>
 </p>
@@ -162,30 +163,35 @@ scrolling="auto">
   to match your plans.  You may also want to change 'Day 1' and 'Day
   2' to be actual dates or days of the week.
 -->
-<h2 id="schedule">Schedule</h2>
+<h2 id="schedule">GPS Skills Course Schedule</h2>
+<div class="row">
+  <div>
+    <table class="table">
+     <thead><tr> <th><strong>Dates</strong></th> <th><strong>Course</strong></th> <th><strong>Syllabus</strong></th> </tr></thead>
+     <tbody>
+      <tr><td>Jan 10 - Jan 26</td><td> Python Skills Course </td><td> Running and Quitting; Variables and Assignment; Data Types and Type Conversion; Built-in Functions and Help; Libraries; Errors & Exceptions; Reading Tabular Data into DataFrames; Pandas Dataframes; Plotting; Lists; For Loops; Conditionals; Looping Over Data Sets; Writing Functions </td></tr>
+      <tr><td>Jan 31 - Feb 16</td><td> R Skills Course </td><td> Introduction to R and RStudio; Seeking Help; Data Structures; Exploring Data Frames; Dataframe manipulation with dplyr; Data Frame Manipulation with tidyr; Plotting with ggplot2; Control Flow; Producing Reports with knitr </td></tr>
+      <tr><td>Feb 21 - Mar 9</td><td> Data Management Skills Course</td><td> Intro to the Unix Shell; Git & Github; DM Best Practices; Tidy Data; SQL</td></tr>
+      </tbody></table>
+  </div>
+</div>
 
-{% include schedule.html %}
+<h2 id="curriculum">Curriculum</h2>
+<!-- R specific data information begins -->
+<p id = "curriculum">
+For this workshop we will be referencing the <a href="https://swcarpentry.github.io/r-novice-gapminder/">R for Reproducible Scientific Analysis</a>, <a href="https://datacarpentry.org/r-intro-geospatial/">Introduction to R for Geospatial Data</a><a href="http://swcarpentry.github.io/python-novice-gapminder/"> Plotting and Programming in Python</a>, <a href="https://librarycarpentry.org/lc-shell/">The UNIX Shell</a>, <a href="https://librarycarpentry.org/lc-git">Library Carpentry: Introduction to Git</a> , <a href="https://librarycarpentry.org/lc-sql/">Library Carpentry: SQL</a>, <a href="https://swcarpentry.github.io/sql-novice-survey/">Databases and SQL</a>, and <a href="https://datacarpentry.org/spreadsheets-socialsci/">Data Organization in Spreadsheets for Social Scientists</a> Carpentries curricula. 
+</p>
 
+<hr/>
 
-<!--
-  ETHERPAD
-
-  At `_misc/etherpad.txt` you will find a template for the etherpad.
-
-  Display the Etherpad for the workshop.  You can set this up in
-  advance or on the first day; either way, make sure you push changes
-  to GitHub after you have its URL.  To create an Etherpad, go to
-
-      http://pad.software-carpentry.org/YYYY-MM-DD-site
-
-  where 'YYYY-MM-DD-site' is the identifier for your workshop,
-  e.g., '2015-06-10-esu'.
--->
-{% if page.etherpad %}
-<p id="etherpad">
-  <strong>HackMD:</strong> <a href="{{page.etherpad}}">{{page.etherpad}}</a>.
+<p>
+  We will use HackMD for collaborative notes, sharing URLs and bits of code.
   <br/>
-  We will use this HackMD for collaborative notes, sharing URLs and bits of code.
+  <strong>Python Course HackMD:</strong> <a href="https://hackmd.io/@kkt008/gps-python-2023">https://hackmd.io/@kkt008/gps-python-2023</a>.
+  <br/>
+  <strong>R Course HackMD:</strong> <a href="https://hackmd.io/@kkt008/gps-r-2023">https://hackmd.io/@kkt008/gps-r-2023</a>. 
+  <br/>
+  <strong>DM Course HackMD:</strong> <a href="https://hackmd.io/@kkt008/gps-dm-2023">https://hackmd.io/@kkt008/gps-dm-2023</a>. 
 </p>
 {% endif %}
 
@@ -208,60 +214,6 @@ scrolling="auto">
   please preview your site before committing, and make sure to run
   'tools/check' as well.
 -->
-<h2 id="syllabus">Syllabus</h2>
-
-<div class="row">
-
-  <div class="col-md-6">
-<!--
-    <h3 id="syllabus-shell">The Unix Shell</h3>
-    <ul>
-      <li>Files and directories</li>
-      <li>History and tab completion</li>
-      <li>Pipes and redirection</li>
-      <li>Looping over files</li>
-      <li>Creating and running shell scripts</li>
-      <li>Finding things</li>
-      <li><a href="{{site.swc_githubio}}/shell-novice/reference.html">Reference...</a></li>
-    </ul>
-  </div>
-  <!--
-  <div class='row'>
-  <div class="col-md-6">
-    <h3 id="syllabus-of">Data Organization in Open Refine</h3>
-    <ul>
-      <li>Cleaning, organizing and enhancing data in OpenRefine</li>
-      <li>Faceting, splitting and clustering</li>
-      <li>Saving and Exporting</li>
-      <li><a href="http://www.datacarpentry.org/OpenRefine-ecology/">Reference...</a></li>
-    </ul>
-
-  </div>
-
-</div>
--->
-  <div class="col-md-6">
-    <h3 id="syllabus-sql">Managing Data with SQL</h3>
-    <ul>
-      <li>Reading and sorting data</li>
-      <li>Filtering with <code>where</code></li>
-      <li>Calculating new values on the fly</li>
-      <li>Handling missing values</li>
-      <li>Combining values using aggregation</li>
-      <li>Combining information from multiple tables using <code>join</code></li>
-      <li>Creating, modifying, and deleting data</li>
-      <li>Programming with databases</li>
-      <li><a href="{{site.swc_githubio}}/sql-novice-survey/reference.html">Reference...</a></li>
-    </ul>
-  </div>
-
-
-</div>
-<hr/>
-
-<h2 id="resources">Resources</h3>
-
-{% include resources.html %}
 
 <!--
   SETUP
