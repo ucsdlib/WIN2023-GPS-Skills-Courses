@@ -174,24 +174,7 @@ For this workshop we will be referencing the <a href="https://swcarpentry.github
 
 <hr/>
 
-<!--
-  SYLLABUS
-
-  Show what topics will be covered.
-
-  1. If your workshop is R rather than Python, remove the comment
-     around that section and put a comment around the Python section.
-  2. Some workshops will delete SQL.
-  3. Please make sure the list of topics is synchronized with what you
-     intend to teach.
-  4. You may need to move the div's with class="col-md-6" around inside
-     the div's with class="row" to balance the multi-column layout.
-
-  This is one of the places where people frequently make mistakes, so
-  please preview your site before committing, and make sure to run
-  'tools/check' as well.
--->
-
+<hr/>
 <!--
   SETUP
 
@@ -207,11 +190,10 @@ For this workshop we will be referencing the <a href="https://swcarpentry.github
 <h2 id="setup">Setup</h2>
 
 <p>
-  To participate in this course, you will need
+  To participate in this workshop, you will need
   access to the software described below. In addition, you will
   need an up-to-date web browser.
 </p>
-
 <!-- Start of 'Python' section. -->
 <div id="python">
   <h3>Python</h3>
@@ -284,121 +266,6 @@ For this workshop we will be referencing the <a href="https://swcarpentry.github
 </div>
 
 <!-- End of 'Python' section. -->
-
-<!-- Start of 'R' section. -->
-<div id="r">
-  <h3>R</h3>
-  <p>
-    <a href="https://www.r-project.org">R</a> is a programming language
-    that is especially powerful for data exploration, visualization, and
-    statistical analysis. To interact with R, we use
-    <a href="https://www.rstudio.com/">RStudio</a>.
-  </p>
-  <div class="tab">
-    <button class="tablinks" onclick="openTab(event,'RWindows')">Windows</button>
-    <button class="tablinks" onclick="openTab(event,'RMacOS')">MacOS</button>
-    <button class="tablinks" onclick="openTab(event,'RLinux')">Linux</button>
-  </div>
-  <div id="RWindows" class="tabcontent">
-    <p>
-      Install R by downloading and running
-      <a href="https://cran.r-project.org/bin/windows/base/release.htm">this .exe file</a>
-      from <a href="https://cran.r-project.org/index.html">CRAN</a>.
-      Also, please install the
-      <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>.
-      Note that if you have separate user and admin accounts, you should run the
-      installers as administrator (right-click on .exe file and select "Run as
-      administrator" instead of double-clicking). Otherwise problems may occur later,
-      for example when installing R packages.
-    </p>
-    <p><strong>Video Tutorial:</strong> <a href="https://youtu.be/q0PjTAylwoU">SWC R Install Windows</a></p>
-  </div>
-  <div id="RMacOS" class="tabcontent">
-    <p>
-      Install R by downloading and running
-      <a href="https://cran.r-project.org/bin/macosx/R-latest.pkg">this .pkg file</a>
-      from <a href="https://cran.r-project.org/index.html">CRAN</a>.
-      Also, please install the
-      <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>.
-    </p>
-    <p><strong>Video Tutorial:</strong> <a href="https://youtu.be/5-ly3kyxwEg">SWC R Install Mac</a></p>     
-  </div>
-  <div id="RLinux" class="tabcontent">
-    <p>
-      Instructions for R installation on various Linux platforms (debian,
-      fedora, redhat, and ubuntu) can be found at
-      <https://cran.r-project.org/bin/linux/>. These will instruct you to
-      use your package manager (e.g. for Fedora run
-      <code>sudo dnf install R</code> and for Debian/Ubuntu, add a ppa
-      repository and then run <code>sudo apt-get install r-base</code>).
-      Also, please install the
-      <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>.
-    </p>
-  </div>
-</div>
-
-<!-- End of 'R' section. -->
-
-<!-- Start of Git section. -->
-<div id="git">
-  <h3>Git</h3>
-  <p>
-    Git is a version control system that lets you track who made changes
-    to what when and has options for easily updating a shared or public
-    version of your code
-    on <a href="https://github.com/">github.com</a>. You will need a
-    <a href="https://help.github.com/articles/supported-browsers/">supported
-    web browser</a>.
-  </p>
-  <p>
-    You will need an account at <a href="https://github.com/">github.com</a>
-    for parts of the Git lesson. Basic GitHub accounts are free. We encourage
-    you to create a GitHub account if you don't have one already.
-    Please consider what personal information you'd like to reveal. For
-    example, you may want to review these
-    <a href="https://help.github.com/articles/keeping-your-email-address-private/">instructions
-      for keeping your email address private</a> provided at GitHub.
-  </p>
-  <div class="tab">
-    <button class="tablinks" onclick="openTab(event,'GitWindows')">Windows</button>
-    <button class="tablinks" onclick="openTab(event,'GitMacOS')">MacOS</button>
-    <button class="tablinks" onclick="openTab(event,'GitLinux')">Linux</button>
-  </div>
-    <div id="GitWindows" class="tabcontent">
-      <p>
-        Git should be installed on your computer as part of your Bash
-        install (see the
-        <a href="#shell">Shell installation instructions</a>).
-      </p>
-    </div>
-    <div id="GitMacOS" class="tabcontent">
-      <p>
-        <strong>For macOS</strong>, install Git for Mac
-        by downloading and running the most recent "mavericks" installer from
-        <a href="http://sourceforge.net/projects/git-osx-installer/files/">this list</a>.
-        Because this installer is not signed by the developer, you may have to
-        right click (control click) on the .pkg file, click Open, and click
-        Open on the pop up window.
-        After installing Git, there will not be anything in your <code>/Applications</code> folder,
-        as Git is a command line program.
-        <strong>For older versions of OS X (10.5-10.8)</strong> use the
-        most recent available installer labelled "snow-leopard"
-        <a href="http://sourceforge.net/projects/git-osx-installer/files/">available here</a>.
-      </p>
-      <p><strong>Video Tutorial: </strong><a href="https://youtu.be/9LQhwETCdwY">SWC Install Shell, Git, and Nano on Mac</a></p>
-    </div>
-    <div id="GitLinux" class="tabcontent">
-      <p>
-      If Git is not already available on your machine you can try to
-      install it via your distro's package manager. For Debian/Ubuntu run
-      <code>sudo apt-get install git</code> and for Fedora run
-      <code>sudo dnf install git</code>.
-      </p>
-    </div>
-  </div>
-</div>
-
-<!-- End of Git section. -->
 
 <!-- Start of Unix Shell section. -->
 
@@ -485,29 +352,84 @@ For this workshop we will be referencing the <a href="https://swcarpentry.github
 </div>
 <!-- End of Unix Shell section. -->
 
+<!-- Start of Git section. -->
+<div id="git">
+  <h3>Git</h3>
+  <p>
+    Git is a version control system that lets you track who made changes
+    to what when and has options for easily updating a shared or public
+    version of your code
+    on <a href="https://github.com/">github.com</a>. You will need a
+    <a href="https://help.github.com/articles/supported-browsers/">supported
+    web browser</a>.
+  </p>
+  <p>
+    You will need an account at <a href="https://github.com/">github.com</a>
+    for parts of the Git lesson. Basic GitHub accounts are free. We encourage
+    you to create a GitHub account if you don't have one already.
+    Please consider what personal information you'd like to reveal. For
+    example, you may want to review these
+    <a href="https://help.github.com/articles/keeping-your-email-address-private/">instructions
+      for keeping your email address private</a> provided at GitHub.
+  </p>
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event,'GitWindows')">Windows</button>
+    <button class="tablinks" onclick="openTab(event,'GitMacOS')">MacOS</button>
+    <button class="tablinks" onclick="openTab(event,'GitLinux')">Linux</button>
+  </div>
+    <div id="GitWindows" class="tabcontent">
+      <p>
+        Git should be installed on your computer as part of your Bash
+        install (see the
+        <a href="#shell">Shell installation instructions</a>).
+      </p>
+    </div>
+    <div id="GitMacOS" class="tabcontent">
+      <p>
+        <strong>For macOS</strong>, install Git for Mac
+        by downloading and running the most recent "mavericks" installer from
+        <a href="http://sourceforge.net/projects/git-osx-installer/files/">this list</a>.
+        Because this installer is not signed by the developer, you may have to
+        right click (control click) on the .pkg file, click Open, and click
+        Open on the pop up window.
+        After installing Git, there will not be anything in your <code>/Applications</code> folder,
+        as Git is a command line program.
+        <strong>For older versions of OS X (10.5-10.8)</strong> use the
+        most recent available installer labelled "snow-leopard"
+        <a href="http://sourceforge.net/projects/git-osx-installer/files/">available here</a>.
+      </p>
+      <p><strong>Video Tutorial: </strong><a href="https://youtu.be/9LQhwETCdwY">SWC Install Shell, Git, and Nano on Mac</a></p>
+    </div>
+    <div id="GitLinux" class="tabcontent">
+      <p>
+      If Git is not already available on your machine you can try to
+      install it via your distro's package manager. For Debian/Ubuntu run
+      <code>sudo apt-get install git</code> and for Fedora run
+      <code>sudo dnf install git</code>.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- End of Git section. -->
 
 
-<!-- start of sql lite section -->
-<div id="sql">
+<!-- hiding SQL Lite insrtuctions
+<div id="sql"> Start of 'SQLite' section.
   <h3>SQLite</h3>
-
   <p>
     SQL is a specialized programming language used with databases.  We
     use a simple database manager called
     <a href="http://www.sqlite.org/">SQLite</a> in our lessons.
-    We will use <a href="https://addons.mozilla.org/en-us/firefox/addon/sqlite-manager/">SQLite Manager</a>
-    plugin for <a href="">Firefox</a>. If you don't have Firefox installed, you need to instal it first and
-    then you will be able to add the plugin.
-  </p>
-  <p>
   </p>
 
   <div class="row">
     <div class="col-md-4">
       <h4 id="sql-windows">Windows</h4>
       <p>
-        Pre-compiled SQLite Binaries for Windows. <a href="https://www.sqlite.org/download.html">Download</a>
-        Install sqlite-dll-win64-x64-3310100.zip
+        The <a href="{{site.swc_installer}}">Software Carpentry Windows Installer</a>
+        installs SQLite for Windows.
+        If you used the installer to configure nano, you don't need to run it again.
       </p>
     </div>
     <div class="col-md-4">
@@ -524,30 +446,5 @@ For this workshop we will be referencing the <a href="https://swcarpentry.github
     </div>
   </div>
 
-<!--
-  Uncomment this section if you are using our virtual machine.
-
-<div id="vm">
-  <h3>Virtual Machine</h3>
-
-  <p>
-    Some instructors prefer to have learners use a virtual machine (VM)
-    rather than install software on their own computers.  If your
-    instructors have chosen to do this, please:
-  </p>
-  <ol>
-    <li>
-      Install <a href="https://www.virtualbox.org/">VirtualBox</a>.
-    </li>
-    <li>
-      Download our <a href="{{site.swc_vm}}">VM image</a>.
-      <strong>Warning:</strong> this file is 1.7 GByte, so please
-      download it <em>before</em> coming to your workshop.
-    </li>
-    <li>
-      Load the VM into VirtualBox by selecting "Import Appliance" and
-      loading the <code>.ova</code> file.
-    </li>
-  </ol>
-</div>
--->
+</div> End of 'SQLite' section. -->
+<!--test note-->
