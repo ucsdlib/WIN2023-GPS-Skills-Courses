@@ -6,8 +6,8 @@
   Use 'page.html' for other pages.
 -->
 <html>
-  <head>
-    <title>{{ page.venue }}</title>
+   <head>
+    <title>UCSD {{ page.eventtitle }}</title>
     {% include header.html %}
     <meta name="slug" content="{{site.github.project_title}}" />
     <meta name="startdate" content="{{page.startdate}}" />
@@ -21,24 +21,27 @@
     <meta name="instructor" content="{{page.instructor|join:'|'}}" />
     <meta name="helper" content="{{page.helper|join:'|'}}" />
     <meta name="contact" content="{{page.contact}}" />
+    <meta name="eventtitle" content="{{page.eventtitle}}" />
+
     {% if page.redirect %}
     <meta http-equiv="refresh" content="0; url={{page.redirect}}" />
     {% endif %}
   </head>
   <body class="workshop">
-
-    {% include github-ribbon.html %}
-
     <div class="container card">
-     {% include banner.html %} 
+      <div>
+      {% include banner.html %}
+      </div>
       <div class="jumbotron">
         <div class="row">
           <div class="col-md-10 col-md-offset-1">
-            <h2>{{page.venue}}</h2>
+            <h2>{{page.eventtitle}}</h2>
             <div class="row">
               <div class="col-md-6">
-                <p>{{page.humandate}}</p>
-                <p>{% if page.humantime %}{{page.humantime}}{% endif %}</p>
+                <p><strong>Date: </strong>{{page.humandate}}</p>
+                <p><strong>Time: </strong>{{page.humantime}}</p>
+                <p><strong>Venue: </strong>{{page.venue}}</p>
+                <p></p>
               </div>
               <div class="col-md-6">
                 <p>
